@@ -22,10 +22,7 @@ class ScavTrap : public ClapTrap
         ScavTrap &operator=(const ScavTrap& other);
         ~ScavTrap();
 
-        void guardGate();// affiche un message "that ScavTrap is now in Gate keeper mode."
+        void guardGate();
         void attack(const std::string& target);
-
-        
-        
     
 };

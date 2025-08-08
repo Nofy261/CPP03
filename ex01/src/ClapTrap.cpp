@@ -59,6 +59,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
         this->_hitP = other.getHitP();
         this->_energyP = other.getEnergyP();
         this->_attackDamage = other.getAttackDamage();
+        std::cout << "ClapTrap Assignation operator called" << std::endl;
     }
     return (*this);
 }
