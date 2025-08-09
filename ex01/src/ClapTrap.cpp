@@ -6,27 +6,26 @@
 /*   By: nolecler <nolecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 13:30:22 by nolecler          #+#    #+#             */
-/*   Updated: 2025/08/08 14:19:21 by nolecler         ###   ########.fr       */
+/*   Updated: 2025/08/09 10:26:12 by nolecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
 #include <iostream>
 
 ClapTrap::ClapTrap() : _name(""), _hitP(10), _energyP(10), _attackDamage(0)
 {
-    std::cout << "Default constructor called." << std::endl;
+    std::cout << "ClapTrap Default constructor called!" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitP(10), _energyP(10), _attackDamage(0)
 {
-    std::cout << "ClapTrap " << name << " was created." << std::endl;
+    std::cout << "ClapTrap " << name << " constructor called!" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& copy)
 {
-    std::cout << "Copy constructor called." << std::endl;
+    std::cout << "ClapTrap Copy constructor called!" << std::endl;
     *this = copy;
 }
 
@@ -59,14 +58,14 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
         this->_hitP = other.getHitP();
         this->_energyP = other.getEnergyP();
         this->_attackDamage = other.getAttackDamage();
-        std::cout << "ClapTrap Assignation operator called" << std::endl;
+        std::cout << "ClapTrap Assignation operator called!" << std::endl;
     }
     return (*this);
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called." << std::endl;
+    std::cout << "ClapTrap destructor called!" << std::endl;
 }
 
 
@@ -78,7 +77,7 @@ void ClapTrap::attack(const std::string& target)// target = cible
         this->_energyP -= 1;
         return ;
     }    
-    std::cout << "ClapTrap " << _name << " can't attack." << std::endl;
+    std::cout << "ClapTrap " << _name << " can't attack!" << std::endl;
 }
 
 

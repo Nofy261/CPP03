@@ -6,11 +6,11 @@
 #    By: nolecler <nolecler@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/08 13:27:48 by nolecler          #+#    #+#              #
-#    Updated: 2025/08/08 13:29:13 by nolecler         ###   ########.fr        #
+#    Updated: 2025/08/09 08:59:14 by nolecler         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = open
+NAME = scav
 
 CC = c++
 

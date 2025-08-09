@@ -6,7 +6,7 @@
 /*   By: nolecler <nolecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 13:30:26 by nolecler          #+#    #+#             */
-/*   Updated: 2025/08/08 14:24:58 by nolecler         ###   ########.fr       */
+/*   Updated: 2025/08/09 10:25:59 by nolecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ class ClapTrap {
 
     protected :
         std::string _name;
-        unsigned int _hitP;// point de vie
-        unsigned int _energyP; // point d'energie
-        unsigned int _attackDamage; //points de degats
+        unsigned int _hitP;
+        unsigned int _energyP;
+        unsigned int _attackDamage;
         
 };
 
