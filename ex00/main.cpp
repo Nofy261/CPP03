@@ -6,7 +6,7 @@
 /*   By: nolecler <nolecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 14:23:47 by nolecler          #+#    #+#             */
-/*   Updated: 2025/08/08 13:13:37 by nolecler         ###   ########.fr       */
+/*   Updated: 2025/08/11 12:40:26 by nolecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,14 @@ int main()
     std::cout << std::endl;
     
     b.attack("Blue");
-    b.takeDamage(2); // a gerer les negatif??
-    b.beRepaired(3); // a gerer les negatif??
+    b.takeDamage(2);
+    b.beRepaired(3);
+    std::cout << std::endl;
+
+    c.takeDamage(11);
+    c.attack("John");
+    c.takeDamage(1);
+    c.beRepaired(1);
     std::cout << std::endl;
     
     return (0);

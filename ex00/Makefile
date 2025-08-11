@@ -6,16 +6,16 @@
 #    By: nolecler <nolecler@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/06 14:23:50 by nolecler          #+#    #+#              #
-#    Updated: 2025/08/06 14:25:32 by nolecler         ###   ########.fr        #
+#    Updated: 2025/08/11 13:30:33 by nolecler         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = open
+NAME = clap
 
 CC = c++
 
-CFLAGS = -Wall -Werror -Wextra -Iincludes -std=c++98
+CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRC := ClapTrap.cpp \
 		main.cpp

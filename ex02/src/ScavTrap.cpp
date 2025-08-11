@@ -6,7 +6,7 @@
 /*   By: nolecler <nolecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 13:04:04 by nolecler          #+#    #+#             */
-/*   Updated: 2025/08/09 14:04:21 by nolecler         ###   ########.fr       */
+/*   Updated: 2025/08/11 10:47:06 by nolecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap() : ClapTrap()
     std::cout << "ScavTrap default constructor called!" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
 {
     this->_hitP = 100;
     this->_energyP = 50;

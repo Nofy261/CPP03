@@ -6,7 +6,7 @@
 /*   By: nolecler <nolecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 13:30:22 by nolecler          #+#    #+#             */
-/*   Updated: 2025/08/09 10:26:12 by nolecler         ###   ########.fr       */
+/*   Updated: 2025/08/11 10:43:04 by nolecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ClapTrap::ClapTrap() : _name(""), _hitP(10), _energyP(10), _attackDamage(0)
     std::cout << "ClapTrap Default constructor called!" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitP(10), _energyP(10), _attackDamage(0)
+ClapTrap::ClapTrap(const std::string &name) : _name(name), _hitP(10), _energyP(10), _attackDamage(0)
 {
     std::cout << "ClapTrap " << name << " constructor called!" << std::endl;
 }
@@ -49,17 +49,14 @@ unsigned int ClapTrap::getAttackDamage() const
     return (this->_attackDamage);
 }
 
-// on veut copier la variable entre parenthese
+
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
-    if (this != &other)
-    {
-        this->_name = other.getName();
-        this->_hitP = other.getHitP();
-        this->_energyP = other.getEnergyP();
-        this->_attackDamage = other.getAttackDamage();
-        std::cout << "ClapTrap Assignation operator called!" << std::endl;
-    }
+    std::cout << "ClapTrap Assignation operator called!" << std::endl;
+    this->_name = other.getName();
+    this->_hitP = other.getHitP();
+    this->_energyP = other.getEnergyP();
+    this->_attackDamage = other.getAttackDamage();
     return (*this);
 }
 
@@ -68,8 +65,7 @@ ClapTrap::~ClapTrap()
     std::cout << "ClapTrap destructor called!" << std::endl;
 }
 
-
-void ClapTrap::attack(const std::string& target)// target = cible
+void ClapTrap::attack(const std::string& target)
 {
     if (this->_hitP > 0 && this->_energyP > 0)
     {
@@ -81,8 +77,13 @@ void ClapTrap::attack(const std::string& target)// target = cible
 }
 
 
-void ClapTrap::takeDamage(unsigned int amount) // amount = montant ou quantite
+void ClapTrap::takeDamage(unsigned int amount)
 {
+    if (this->_hitP == 0)
+    {
+        std::cout << "ClapTrap " << _name << " is already dead." << std::endl;
+        return ;
+    }
     if (amount >= this->_hitP)
     {
         this->_hitP = 0;
@@ -94,10 +95,7 @@ void ClapTrap::takeDamage(unsigned int amount) // amount = montant ou quantite
 }
 
 
-// augmente _hitP de la quantite de amount
-// ne peut pas se reparer s il est mort ou s il n a plus d energie
-// cette action fait perdre un point d energie
-void ClapTrap::beRepaired(unsigned int amount) // se reparer
+void ClapTrap::beRepaired(unsigned int amount)
 {
     if (this->_hitP > 0 && this->_energyP > 0)
     {

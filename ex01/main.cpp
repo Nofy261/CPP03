@@ -6,7 +6,7 @@
 /*   By: nolecler <nolecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 13:30:16 by nolecler          #+#    #+#             */
-/*   Updated: 2025/08/09 10:48:02 by nolecler         ###   ########.fr       */
+/*   Updated: 2025/08/11 09:53:42 by nolecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 #include "ScavTrap.hpp"
 #include <iostream>
 
-
-// valeurs negatif a gerer ?
 
 int main()
 {

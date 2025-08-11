@@ -6,7 +6,7 @@
 /*   By: nolecler <nolecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 13:03:48 by nolecler          #+#    #+#             */
-/*   Updated: 2025/08/09 13:20:32 by nolecler         ###   ########.fr       */
+/*   Updated: 2025/08/11 10:45:50 by nolecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class ClapTrap {
     public :
         ClapTrap();
-        ClapTrap(std::string _name);
+        ClapTrap(const std::string &name);
         ClapTrap(const ClapTrap& copy);
         ClapTrap &operator=(const ClapTrap& other);
         ~ClapTrap();

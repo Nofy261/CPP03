@@ -6,13 +6,12 @@
 /*   By: nolecler <nolecler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 13:30:19 by nolecler          #+#    #+#             */
-/*   Updated: 2025/08/09 10:27:24 by nolecler         ###   ########.fr       */
+/*   Updated: 2025/08/11 10:44:34 by nolecler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include <iostream>
-
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
@@ -22,7 +21,7 @@ ScavTrap::ScavTrap() : ClapTrap()
     std::cout << "ScavTrap default constructor called!" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
 {
     this->_hitP = 100;
     this->_energyP = 50;
@@ -33,17 +32,16 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 ScavTrap::ScavTrap(const ScavTrap& copy) : ClapTrap(copy)
 {
     std::cout << "ScavTrap copy constructor called!" << std::endl;
+    *this = copy;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 {
-	// this->_name = other._name;
-    // this->_hitP = other._hitP;
-    // this->_energyP = other._energyP;
-    // this->_attackDamage = other._attackDamage;
     std::cout << "ScavTrap Assignation operator called!" << std::endl;
-
-    ClapTrap::operator=(other); // evite de repeter le code
+	this->_name = other._name;
+    this->_hitP = other._hitP;
+    this->_energyP = other._energyP;
+    this->_attackDamage = other._attackDamage;
     return (*this);
 }
 
